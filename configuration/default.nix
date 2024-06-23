@@ -8,6 +8,7 @@
     ./features/services/nginx.nix
     ./features/services/uptime-kuma.nix
     ./features/services/prometheus.nix
+    ./features/services/loki.nix
     ./features/services/grafana.nix
     ./features/services/zabbix.nix
   ];
