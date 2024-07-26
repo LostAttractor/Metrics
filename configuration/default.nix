@@ -1,11 +1,11 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   imports = [
-    ./features/nix.nix
-    ./features/fish.nix
-    ./features/avahi.nix
-    ./features/services/nginx.nix
+    (inputs.homelab + "/features/nix")
+    (inputs.homelab + "/features/fish.nix")
+    (inputs.homelab + "/features/network/avahi")
+    (inputs.homelab + "/features/nginx.nix")
     ./features/services/uptime-kuma.nix
     ./features/services/prometheus.nix
     ./features/services/loki.nix
